@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal académico de presentación del ITACE Reynosa.">
+  <title>ITACE Reynosa | Lealtad, Honor y Trabajo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- PANTALLA DE BIENVENIDA -->
+  <section id="bienvenida" class="welcome-screen" aria-labelledby="tituloBienvenida">
+    <div class="welcome-overlay"></div>
+
+    <div class="welcome-content">
+      <div class="welcome-brand">
+        <img src="imagenes/itace.jpg" alt="Logotipo del ITACE"
+             class="welcome-logo"
+             onerror="this.style.display='none'">
+
+        <div>
+          <p class="eyebrow">BIENVENIDOS A</p>
+          <h1 id="tituloBienvenida">
+            Instituto Tamaulipeco de Capacitación para el Empleo
+          </h1>
+          <p class="motto">LEALTAD, honor y trabajo</p>
+        </div>
+      </div>
+
+      <p class="welcome-description">
+        Conoce nuestras instalaciones, carreras técnicas, actividades
+        y la vida estudiantil del plantel Reynosa.
+      </p>
+
+      <div class="audios-derecha">
+    <button type="button" class="boton-audio" id="btnAudioItace">
+        ▶ Audio del ITACE
+    </button>
+
+    <button type="button" class="boton-audio" id="btnAudioTamaulipas">
+        ▶ Himno de Tamaulipas
+    </button> 
+
+    <audio id="audioItace" src="audio/itacee.mp3" preload="none"></audio>
+    <audio id="audioTamaulipas" src="audio/tamaulipas.mp3" preload="none"></audio>
+</div>
+
+      <button class="primary-button enter-button"
+              id="entrarPortal" type="button">
+        Entrar al portal <span aria-hidden="true">→</span>
+      </button>
+
+      <p class="welcome-note">
+        Proyecto académico de presentación escolar.
+      </p>
+    </div>
+  </section>
+
+  <!-- PORTAL PRINCIPAL -->
+  <div id="portal" class="portal hidden">
+
+    <div class="top-strip">
+      <span>Instituto Tamaulipeco de Capacitación para el Empleo</span>
+      <strong>LEALTAD, honor y trabajo</strong>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" data-screen="inicio"
+         aria-label="Ir al inicio del portal">
+        <img src="imagenes/itace.jpg" alt="Logotipo del ITACE"
+             onerror="this.style.display='none'">
+        <span>
+          <strong>ITACE</strong>
+          <small>Plantel Reynosa</small>
+        </span>
+      </a>
+
+      <button id="menuToggle" class="menu-toggle"
+              type="button" aria-expanded="false"
+              aria-controls="nav" aria-label="Abrir menú">☰</button>
+
+      <nav id="nav" class="nav" aria-label="Navegación principal">
+        <button class="nav-link active" data-screen="inicio" type="button">Inicio</button>
+        <button class="nav-link" data-screen="institucion" type="button">Conócenos</button>
+        <button class="nav-link" data-screen="instalaciones" type="button">Instalaciones</button>
+        <button class="nav-link" data-screen="carreras" type="button">Carreras</button>
+        <button class="nav-link" data-screen="clubes" type="button">Vida estudiantil</button>
+        <button class="nav-link" data-screen="proyectos" type="button">Proyectos</button>
+        <button class="nav-link" data-screen="noticias" type="button">Noticias</button>
+        <button class="nav-link" data-screen="eventos" type="button">Eventos</button>
+        <button class="nav-link" data-screen="docentes" type="button">Docentes</button>
+        <button class="nav-link" data-screen="galeria" type="button">Galería</button>
+        <button class="nav-link" data-screen="preguntas" type="button">Preguntas frecuentes</button>
+        <button class="nav-link" data-screen="contacto" type="button">Contacto</button>
+        <button class="nav-link" data-screen="creditos" type="button">Créditos</button>
+      </nav>
+    </header>
+
+    <main id="contenidoPrincipal">
+
+      <!-- INICIO -->
+      <section id="inicio" class="screen active">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">FORMACIÓN TÉCNICA · FUTURO PROFESIONAL</p>
+            <h2>Tu talento construye el futuro</h2>
+            <p>
+              Conoce el plantel ITACE Reynosa, sus espacios, carreras
+              técnicas y actividades que enriquecen la experiencia estudiantil.
+            </p>
+
+            <div class="hero-actions">
+              <button class="primary-button" data-screen="carreras" type="button">
+                Conocer carreras
+              </button>
+              <button class="outline-button" data-screen="instalaciones" type="button">
+                Recorrer el plantel
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-photo">
+            <img src="imagenes/principal.jpg" alt="Vista principal del plantel ITACE Reynosa">
+            <span class="photo-label">ITACE Reynosa</span>
+          </div>
+        </div>
+
+        <div class="welcome-band">
+          <p class="eyebrow">NUESTRA IDENTIDAD</p>
+          <h2>Lealtad, honor y trabajo</h2>
+          <p>
+            Una comunidad educativa que busca impulsar los conocimientos,
+            las habilidades y el crecimiento de sus estudiantes.
+          </p>
+        </div>
+
+        <div class="section-heading">
+          <p class="eyebrow">EXPLORA EL PORTAL</p>
+          <h2>Todo lo que puedes conocer</h2>
+        </div>
+
+        <div class="quick-grid">
+          <button class="quick-card" data-screen="institucion" type="button">
+            <span>01</span><strong>Conócenos</strong>
+            <small>Historia, misión y valores</small>
+          </button>
+          <button class="quick-card" data-screen="instalaciones" type="button">
+            <span>02</span><strong>Instalaciones</strong>
+            <small>Espacios del plantel</small>
+          </button>
+          <button class="quick-card" data-screen="carreras" type="button">
+            <span>03</span><strong>Oferta educativa</strong>
+            <small>Carreras técnicas</small>
+          </button>
+          <button class="quick-card" data-screen="clubes" type="button">
+            <span>04</span><strong>Vida estudiantil</strong>
+            <small>Clubes y actividades</small>
+          </button>
+        </div>
+
+        <div class="media-section">
+          <div class="section-heading">
+            <p class="eyebrow">CONOCE NUESTRA COMUNIDAD</p>
+            <h2>Videos del plantel</h2>
+          </div>
+
+          <div class="media-grid">
+            <article class="media-card">
+              <video controls preload="metadata" poster="imagenes/principal.jpg">
+                <source src="videos/prepa.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+              </video>
+              <h3>Conoce el plantel</h3>
+              <p>Video de presentación escolar.</p>
+            </article>
+
+            <article class="media-card">
+              <video controls preload="metadata" poster="imagenes/escuela.jpg">
+                <source src="videos/itace2.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+              </video>
+              <h3>Experiencia ITACE</h3>
+              <p>Material audiovisual del plantel.</p>
+            </article>
+
+            <!-- VIDEO 3 -->
+<article class="media-card">
+    <video controls preload="metadata">
+        <source src="videos/video3.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+    </video>
+
+    <h3>Conoce más sobre ITACE</h3>
+    <p>Actividades y experiencias de nuestra comunidad estudiantil.</p>
+</article>
+          </div>
+        </div>
+      </section>
+
+     <!-- CONÓCENOS -->
+<section id="institucion" class="screen">
+
+    <div class="page-banner">
+        <p class="eyebrow">NUESTRA COMUNIDAD</p>
+        <h2>Conoce al ITACE</h2>
+        <p>Identidad, formación y compromiso educativo.</p>
+    </div>
+
+    <div class="intro-layout conocenos-intro">
+
+        <div class="conocenos-imagen">
+            <img src="imagenes/escuela.jpg"
+                 alt="Instalaciones del ITACE Reynosa">
+
+            <span class="imagen-etiqueta">
+                ITACE Plantel Reynosa
+            </span>
+        </div>
+
+        <div class="conocenos-texto">
+            <span class="etiqueta-dorada">NUESTRA INSTITUCIÓN</span>
+
+            <h3>Una escuela para desarrollar tu potencial</h3>
+
+            <p>
+                El Instituto Tamaulipeco de Capacitación para el Empleo
+                ofrece formación orientada al desarrollo de habilidades
+                técnicas y al crecimiento académico de sus estudiantes.
+            </p>
+
+            <p>
+                El plantel cuenta con actividades y espacios que acompañan
+                la formación dentro y fuera del aula.
+            </p>
+
+            <div class="conocenos-dato">
+                <span>✦</span>
+                <p>Aprendizaje, preparación y formación para el futuro.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="identidad-titulo">
+        <span class="etiqueta-dorada">LO QUE NOS IDENTIFICA</span>
+        <h2>Nuestra identidad institucional</h2>
+        <p>Conoce los principios que representan a nuestra comunidad.</p>
+    </div>
+
+    <div class="values-grid tarjetas-identidad">
+
+        <!-- MISIÓN -->
+        <article class="info-card identidad-card">
+            <div class="identidad-icono">◎</div>
+
+            <span class="numero-tarjeta">01</span>
+
+            <h3>Misión</h3>
+
+            <p>
+                Formar estudiantes con conocimientos y habilidades técnicas
+                que favorezcan su desarrollo académico y laboral.
+            </p>
+
+            <details>
+                <summary>Conocer más</summary>
+                <p class="texto-extra">
+                    La formación académica y técnica permite desarrollar
+                    capacidades que pueden aplicarse en diferentes ámbitos
+                    de la vida escolar y profesional.
+                </p>
+            </details>
+        </article>
+
+        <!-- VISIÓN -->
+        <article class="info-card identidad-card">
+            <div class="identidad-icono">✧</div>
+
+            <span class="numero-tarjeta">02</span>
+
+            <h3>Visión</h3>
+
+            <p>
+                Ser una comunidad educativa comprometida con el aprendizaje,
+                la innovación y la mejora continua.
+            </p>
+
+            <details>
+                <summary>Conocer más</summary>
+                <p class="texto-extra">
+                    La mejora continua impulsa el crecimiento de los
+                    estudiantes y fortalece el compromiso con su educación.
+                </p>
+            </details>
+        </article>
+
+        <!-- VALORES -->
+        <article class="info-card identidad-card">
+            <div class="identidad-icono">★</div>
+
+            <span class="numero-tarjeta">03</span>
+
+            <h3>Valores</h3>
+
+            <p>
+                Lealtad, honor, trabajo, responsabilidad, respeto y colaboración.
+            </p>
+
+            <details>
+                <summary>Conocer más</summary>
+                <p class="texto-extra">
+                    Estos valores promueven una convivencia respetuosa,
+                    el esfuerzo personal y el trabajo en equipo.
+                </p>
+            </details>
+        </article>
+
+    </div>
+
+    <div class="lema-institucional">
+        <span>✦</span>
+        <h2>Lealtad, Honor y Trabajo</h2>
+        <p>Principios que representan la identidad del ITACE.</p>
+    </div>
+
+
+</section> 
+
+      <!-- INSTALACIONES -->
+      <section id="instalaciones" class="screen">
+        <div class="page-banner">
+          <p class="eyebrow">NUESTROS ESPACIOS</p>
+          <h2>Instalaciones</h2>
+          <p>Conoce algunos espacios que forman parte de la experiencia escolar.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="place-card">
+            <img src="imagenes/cafeteria.jpg" alt="Cafetería del plantel">
+            <div><h3>Cafetería</h3><p>Espacio para descansar y convivir durante los recesos.</p></div>
+          </article>
+          <article class="place-card">
+            <img src="imagenes/salones.jpg" alt="Salones de clase">
+            <div><h3>Salones</h3><p>Espacios destinados al aprendizaje y al trabajo académico.</p></div>
+          </article>
+          <article class="place-card">
+            <img src="imagenes/talleres.jpg" alt="Talleres escolares">
+            <div><h3>Talleres</h3><p>Áreas para practicar conocimientos y desarrollar habilidades técnicas.</p></div>
+          </article>
+          <article class="place-card">
+            <img src="imagenes/estacionamiento.jpg" alt="Estacionamiento del plantel">
+            <div><h3>Estacionamiento</h3><p>Área de acceso y estacionamiento del plantel.</p></div>
+          </article>
+          <article class="place-card">
+            <img src="imagenes/entrada.jpg" alt="Entrada principal del plantel">
+            <div><h3>Entrada principal</h3><p>Acceso que da la bienvenida a la comunidad escolar.</p></div>
+          </article>
+          <article class="place-card">
+            <img src="imagenes/caseta.jpg" alt="Caseta de seguridad">
+            <div><h3>Caseta de seguridad</h3><p>Punto de control y orientación para el ingreso.</p></div>
+          </article>
+          <article class="place-card">
+            <img src="imagenes/plaza.jpg" alt="Plaza escolar">
+            <div><h3>Plaza escolar</h3><p>Espacio para actividades y convivencia de la comunidad.</p></div>
+          </article>
+          <article class="place-card">
+            <img src="imagenes/explanada.jpg" alt="Explanada escolar">
+            <div><h3>Explanada</h3><p>Área abierta para reuniones, ceremonias y actividades.</p></div>
+          </article>
+          <article class="place-card">
+            <img src="imagenes/area.jpg" alt="Área de servicios escolares">
+            <div><h3>Servicios escolares</h3><p>Área relacionada con Dirección, Control Escolar, Enfermería, Prefectura y Vinculación.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CARRERAS -->
+      <section id="carreras" class="screen">
+        <div class="page-banner">
+          <p class="eyebrow">OFERTA EDUCATIVA</p>
+          <h2>Carreras técnicas</h2>
+          <p>Conoce las áreas de formación que se presentan en este portal.</p>
+        </div>
+
+        <div class="cards-grid career-grid">
+          <article class="career-card"><img src="imagenes/mantenimiento-automotriz.jpg" alt="Mantenimiento automotriz"><div><h3>Mantenimiento automotriz</h3><p>Conocimientos sobre revisión, diagnóstico y mantenimiento de vehículos.</p></div></article>
+          <article class="career-card"><img src="imagenes/logistica.jpg" alt="Logística"><div><h3>Logística</h3><p>Organización de almacenamiento, distribución y movimiento de productos.</p></div></article>
+          <article class="career-card"><img src="imagenes/inteligencia-artificial.jpg" alt="Inteligencia artificial"><div><h3>Inteligencia artificial</h3><p>Introducción a tecnologías inteligentes, datos y solución de problemas.</p></div></article>
+          <article class="career-card"><img src="imagenes/electronica.jpg" alt="Electrónica"><div><h3>Electrónica</h3><p>Estudio de circuitos, componentes y sistemas electrónicos.</p></div></article>
+          <article class="career-card"><img src="imagenes/programacion.jpg" alt="Programación"><div><h3>Programación</h3><p>Diseño y desarrollo de programas, páginas y soluciones digitales.</p></div></article>
+          <article class="career-card"><img src="imagenes/diseño-grafico.jpg" alt="Diseño gráfico"><div><h3>Diseño gráfico</h3><p>Comunicación visual mediante imágenes y herramientas digitales.</p></div></article>
+          <article class="career-card"><img src="imagenes/mantenimiento-industrial.jpg" alt="Mantenimiento industrial"><div><h3>Mantenimiento industrial</h3><p>Revisión y conservación de equipos y sistemas industriales.</p></div></article>
+          <article class="career-card"><img src="imagenes/ciberseguridad.jpg" alt="Ciberseguridad"><div><h3>Ciberseguridad</h3><p>Principios para proteger sistemas, información y redes digitales.</p></div></article>
+        </div>
+
+        <p class="source-note">
+          Confirma con Control Escolar cuáles carreras están disponibles
+          en el plantel y en cada ciclo escolar.
+        </p>
+      </section>
+
+      <!-- VIDA ESTUDIANTIL -->
+      <section id="clubes" class="screen">
+        <div class="page-banner">
+          <p class="eyebrow">APRENDE Y PARTICIPA</p>
+          <h2>Vida estudiantil</h2>
+          <p>Actividades que fortalecen el trabajo en equipo y la creatividad.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="club-card"><img src="imagenes/banda-guerra.jpg" alt="Banda de guerra"><div><h3>Banda de guerra</h3><p>Disciplina, coordinación y representación cívica.</p></div></article>
+          <article class="club-card"><img src="imagenes/ajedrez.jpg" alt="Club de ajedrez"><div><h3>Ajedrez</h3><p>Razonamiento, estrategia y concentración.</p></div></article>
+          <article class="club-card"><img src="imagenes/robotica.jpg" alt="Club de robótica"><div><h3>Robótica</h3><p>Creatividad, tecnología y resolución de retos.</p></div></article>
+          <article class="club-card"><img src="imagenes/premilitar.jpg" alt="Actividad premilitar"><div><h3>Premilitar</h3><p>Trabajo en equipo, orden y disciplina.</p></div></article>
+          <article class="club-card"><img src="imagenes/ooratoria.jpg" alt="Actividad de oratoria"><div><h3>Oratoria</h3><p>Expresión oral, argumentación y confianza.</p></div></article>
+          <article class="club-card"><img src="imagenes/rondalla.jpg" alt="Rondalla escolar"><div><h3>Rondalla</h3><p>Música, práctica colectiva y expresión artística.</p></div></article>
+          <article class="club-card"><img src="imagenes/c2.jpg" alt="Grupo de danza escolar"><div><h3>Danza</h3><p>Expresión corporal, ritmo y cultura.</p></div></article>
+          <article class="club-card"><img src="imagenes/dibujo.jpg" alt="Actividad de dibujo"><div><h3>Dibujo</h3><p>Creatividad y expresión mediante recursos visuales.</p></div></article>
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section id="proyectos" class="screen">
+        <div class="page-banner">
+          <p class="eyebrow">IDEAS QUE CRECEN</p>
+          <h2>Proyectos estudiantiles</h2>
+          <p>Un espacio para compartir trabajos, prototipos y propuestas.</p>
+        </div>
+        <div class="contenedor-proyectos">
+
+    <!-- PROYECTO DE TECNOLOGÍA -->
+    <article class="tarjeta-proyecto">
+        <img src="imagenes/robot.jpg" alt="Proyecto de creación de un robot"
+             class="imagen-proyecto">
+
+        <h3>🤖 Proyecto de tecnología</h3>
+        <p>
+            Los estudiantes ponen en práctica sus conocimientos de tecnología,
+            programación y electrónica mediante la creación de aplicaciones,
+            desarrollando habilidades de innovación y resolución de problemas.
+        </p>
+    </article>
+
+    <!-- DEMOSTRACIÓN TECNOLÓGICA -->
+    <article class="tarjeta-proyecto">
+        <img src="imagenes/tecnologia.jpg" alt="Demostración de tecnología e innovación"
+             class="imagen-proyecto">
+
+        <h3>🔬 Ciencia, tecnología e innovación</h3>
+        <p>
+            En el ITACE Plantel Matamoros se realizó una demostración tecnológica
+            relacionada con la Feria de Divulgación de la Ciencia del COTACYT.
+            Se presentaron una impresora 3D y un brazo robótico, mostrando sus
+            aplicaciones en el aprendizaje y la innovación.
+        </p>
+    </article>
+
+    <!-- PROYECTOS DE ESPECIALIDAD -->
+    <article class="tarjeta-proyecto">
+        <img src="imagenes/especialidades.jpg" alt="Proyectos realizados por estudiantes"
+             class="imagen-proyecto">
+
+        <h3>🛠️ Proyectos de especialidad</h3>
+        <p>
+            Los alumnos realizan proyectos relacionados con su carrera,
+            aplicando lo aprendido en clase y fortaleciendo sus habilidades
+            técnicas, creatividad y preparación para el mundo laboral.
+        </p>
+    </article>
+
+</div>
+
+<h2>Proyectos comunitarios</h2>
+<p>
+    Los estudiantes también participan en actividades que fomentan la
+    convivencia, la participación y el compromiso con la comunidad.
+</p>
+
+<div class="contenedor-proyectos">
+
+    <!-- CARRERA EN EL PARQUE CULTURAL -->
+    <article class="tarjeta-proyecto">
+        <img src="imagenes/carrera.jpg"
+             alt="Carrera de los alumnos en el Parque Cultural"
+             class="imagen-proyecto">
+
+        <h3>🏃 Carrera en el Parque Cultural</h3>
+        <p>
+            Los alumnos del ITACE participaron en una carrera en el Parque
+            Cultural, compartiendo una actividad deportiva que promueve
+            la convivencia, el compañerismo y la participación estudiantil.
+        </p>
+    </article>
+    <!-- CONCURSO DE CATRINAS -->
+<article class="tarjeta-proyecto">
+    <img src="imagenes/catrinas.jpg"
+         alt="Concurso de catrinas"
+         class="imagen-proyecto">
+
+    <h3>Concurso de Catrinas</h3>
+
+    <p>
+        Actividad cultural en la que los estudiantes participan
+        mostrando su creatividad mediante la elaboración y
+        presentación de catrinas, celebrando nuestras tradiciones
+        mexicanas.
+    </p>
+</article>
+
+<!-- EQUIPO DE FÚTBOL FEMENIL -->
+<article class="tarjeta-proyecto">
+    <img src="imagenes/femenil.jpg"
+         alt="Competencias del equipo de fútbol femenil"
+         class="imagen-proyecto">
+
+    <h3>Competencias de Fútbol Femenil</h3>
+
+    <p>
+        Participación de nuestro equipo de fútbol femenil en
+        competencias deportivas, fomentando el trabajo en equipo,
+        la disciplina y el compañerismo.
+    </p>
+</article>
+
+</div>
+      </section>
+
+      <!-- SECCIÓN DE NOTICIAS -->
+<section id="noticias" class="screen">
+
+  <div class="page-banner">
+    <p class="eyebrow">ACTUALIDAD ITACE</p>
+    <h2>Noticias del ITACE Reynosa</h2>
+    <p>
+      Conoce las actividades, logros y acontecimientos
+      más recientes de nuestra comunidad estudiantil.
+    </p>
+  </div>
+
+  <div class="noticias-container">
+
+    <!-- NOTICIA 1: MARATÓN DE CUENTOS -->
+    <article class="noticia-card">
+      <img src="imagenes/cuentos.jpg"
+           alt="Maratón de cuentos, mitos y leyendas de Tamaulipas">
+
+      <div class="noticia-contenido">
+        <span class="noticia-categoria">Cultura y lectura</span>
+        <h3>Maratón de Cuentos, Mitos y Leyendas de Tamaulipas</h3>
+
+        <p>
+          El ITACE Plantel Reynosa realizó una jornada dedicada
+          a fomentar la lectura y preservar las historias y
+          tradiciones que forman parte de nuestra identidad cultural.
+        </p>
+
+        <details>
+          <summary>Leer noticia completa</summary>
+          <p>
+            La actividad contó con la participación de la C.P.
+            Martha Gabriela Reyes Anaya, Encargada de la Dirección
+            del Plantel; personal directivo, estudiantes y la
+            Mtra. Sandra Silva Camacho, impulsora de este encuentro
+            literario.
+          </p>
+          <p>
+            Bajo el impulso de la Dra. Claudia Anaya Alvarado,
+            Directora General del ITACE, se promueven espacios
+            que fortalecen la lectura, la creatividad y el orgullo
+            por la riqueza cultural de Tamaulipas.
+          </p>
+        </details>
+      </div>
+    </article>
+
+    <!-- NOTICIA 2: EQUIPOS DE CÓMPUTO -->
+    <article class="noticia-card">
+      <img src="imagenes/computadoras.jpg"
+           alt="Entrega de equipos de cómputo al ITACE Reynosa">
+
+      <div class="noticia-contenido">
+        <span class="noticia-categoria">Tecnología y educación</span>
+        <h3>El ITACE Reynosa recibe 14 equipos de cómputo</h3>
+
+        <p>
+          El plantel recibió 14 equipos de cómputo adquiridos
+          mediante las economías generadas del Programa
+          Potenciación de Escuelas al CIEN 2023.
+        </p>
+
+        <details>
+          <summary>Leer noticia completa</summary>
+          <p>
+            La entrega tiene como objetivo fortalecer la
+            infraestructura tecnológica y brindar mejores
+            herramientas para el aprendizaje de la comunidad
+            estudiantil.
+          </p>
+          <p>
+            Estas acciones contribuyen a la modernización de los
+            espacios educativos, al fortalecimiento de la enseñanza
+            y al desarrollo académico y profesional de las y los
+            estudiantes del Plantel Reynosa.
+          </p>
+        </details>
+      </div>
+    </article>
+
+    <!-- NOTICIA 3: TORNEO DE AJEDREZ -->
+    <article class="noticia-card">
+      <img src="imagenes/na.jpg"
+           alt="Torneo interno amistoso de ajedrez del ITACE Reynosa">
+
+      <div class="noticia-contenido">
+        <span class="noticia-categoria">Bienestar estudiantil</span>
+        <h3>ITACE Reynosa realiza torneo amistoso de ajedrez</h3>
+
+        <p>
+          Como parte del programa ABC de las Emociones, se llevó
+          a cabo un torneo para fortalecer las habilidades
+          socioemocionales y la sana convivencia.
+        </p>
+
+        <details>
+          <summary>Leer noticia completa</summary>
+          <p>
+            La actividad contó con la participación de la C.P.
+            Martha Gabriela Reyes Anaya, personal de Servicios
+            Estudiantiles y del Centro de Integración Juvenil,
+            con el acompañamiento de la psicóloga Marcela González.
+          </p>
+          <p><strong>Ganadores del torneo:</strong></p>
+          <ul>
+            <li>Primer lugar: Carlos Naín Castillo Rivas.</li>
+            <li>Segundo lugar: Esahú Guadalupe Salazar Hernández.</li>
+            <li>Tercer lugar: José Israel Méndez Bustos.</li>
+          </ul>
+          <p>
+            Bajo el liderazgo de la Dra. Claudia Anaya Alvarado,
+            el ITACE continúa impulsando actividades que promueven
+            el bienestar emocional, la paciencia, el respeto y el
+            desarrollo integral de sus estudiantes.
+          </p>
+        </details>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+      <!-- SECCIÓN DE EVENTOS -->
+<section id="eventos" class="screen">
+
+  <div class="page-banner">
+    <p class="eyebrow">VIDA ESTUDIANTIL</p>
+    <h2>Eventos del ITACE Reynosa</h2>
+    <p>Momentos que forman parte de nuestra comunidad.</p>
+  </div>
+
+  <div class="eventos-container">
+
+    <!-- EVENTO 1 -->
+    <div class="evento-card">
+      <img src="imagenes/evento1.jpg" alt="Concurso del Día de Muertos">
+      <h3>Concurso del Día de Muertos</h3>
+    </div>
+
+    <!-- EVENTO 2 -->
+    <div class="evento-card">
+      <img src="imagenes/evento2.jpg" alt="Entrega de constancia">
+      <h3>Entrega de constancia</h3>
+    </div>
+
+    <!-- EVENTO 3 -->
+    <div class="evento-card">
+      <img src="imagenes/evento3.jpg" alt="Conferencia Tu futuro, tus decisiones">
+      <h3>Conferencia “Tu futuro, tus decisiones”</h3>
+    </div>
+
+  </div>
+
+</section>
+
+
+      <!-- DIRECTORIO DOCENTE -->
+<section id="docentes" class="screen">
+
+    <div class="page-banner">
+        <p class="eyebrow">NUESTRO PERSONAL ACADÉMICO</p>
+        <h2>Directorio docente</h2>
+        <p>Conoce a nuestros docentes, sus materias y áreas de especialidad.</p>
+    </div>
+
+    <div class="directory-tools">
+        <label for="buscarDocente">Buscar docente o materia</label>
+        <input id="buscarDocente" type="search"
+               placeholder="Escribe un nombre, materia o especialidad..."
+               autocomplete="off">
+
+        <p id="contadorDocentes" class="results-count">
+            30 docentes registrados
+        </p>
+    </div>
+
+    <div id="listaDocentes" class="teacher-grid">
+
+        <!-- 1. LAURA ESMERALDA HEREDIA BLANCO -->
+        <article class="docente teacher-card">
+            <img src="imagenes/laura.jpg" alt="Fotografía de Laura Esmeralda Heredia Blanco" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Laura Esmeralda Heredia Blanco</h3>
+                <p><strong>Materias:</strong> Ciencias 1, 3 y 5.</p>
+                <p><strong>Semestres:</strong> Primero, tercero y quinto.</p>
+                <p><strong>Especialidad:</strong> Física y Química. Su carrera principal es Biología.</p>
+            </div>
+        </article>
+
+        <!-- 2. FELIPE HERNÁNDEZ GONZÁLEZ -->
+        <article class="docente teacher-card">
+            <img src="imagenes/felipe.jpg" alt="Fotografía de Felipe Hernández González" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Felipe Hernández González</h3>
+                <p><strong>Módulo:</strong> Electrónica.</p>
+                <p><strong>Especialidad:</strong> Electrónica y semiconductores.</p>
+                <p><strong>Semestres:</strong> Tercero y quinto.</p>
+            </div>
+        </article>
+
+        <!-- 3. LUIS ENRIQUE LERMA MARTÍNEZ -->
+        <article class="docente teacher-card">
+            <img src="imagenes/lerma.jpg" alt="Fotografía de Luis Enrique Lerma Martínez" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Luis Enrique Lerma Martínez</h3>
+                <p><strong>Materias:</strong> Lengua y Comunicación 1 y 3; Conciencia Histórica 2 en quinto semestre.</p>
+                <p><strong>Carreras relacionadas:</strong> Mantenimiento petrolero y mantenimiento industrial.</p>
+                <p><strong>Semestres:</strong> Primero, tercero y quinto.</p>
+                <p><strong>Especialidad:</strong> Ingeniería petrolera y licenciatura en Docencia, con diplomado en competencias docentes.</p>
+            </div>
+        </article>
+
+        <!-- 4. YURIDIA LIZBETH CEPEDA RAMOS -->
+        <article class="docente teacher-card">
+            <img src="imagenes/yuri.jpg" alt="Fotografía de Yuridia Lizbeth Cepeda Ramos" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Yuridia Lizbeth Cepeda Ramos</h3>
+                <p><strong>Materias:</strong> Inglés y Temas Selectos de Matemáticas 2.</p>
+                <p><strong>Especialidad:</strong> Ingeniería Industrial, licenciatura en Matemáticas y maestría en Educación e Innovación Educativa. Actualmente estudia un doctorado en Educación.</p>
+                <p><strong>Semestres:</strong> Tercero y quinto.</p>
+            </div>
+        </article>
+
+        <!-- 5. JUAN PABLO TORRES ADAME -->
+        <article class="docente teacher-card">
+            <img src="imagenes/juan.jpg" alt="Fotografía de Juan Pablo Torres Adame" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Juan Pablo Torres Adame</h3>
+                <p><strong>Materias:</strong> Programación y Cultura Digital.</p>
+                <p><strong>Semestres:</strong> Primero, tercero y quinto.</p>
+                <p><strong>Club:</strong> Robótica.</p>
+                <p><strong>Actividad:</strong> Cursos de Excel los sábados.</p>
+                <p><strong>Especialidad:</strong> Licenciatura en Informática Administrativa y maestría en Ciencias de la Enseñanza.</p>
+            </div>
+        </article>
+
+        <!-- 6. ROMUALDO GUADALUPE DE LA CRUZ -->
+        <article class="docente teacher-card">
+            <img src="imagenes/cruz.jpg" alt="Fotografía de Romualdo Guadalupe de la Cruz" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Romualdo Guadalupe de la Cruz</h3>
+                <p><strong>Materias:</strong> Pensamiento Matemático 1 y 3.</p>
+                <p><strong>Semestres:</strong> Primero y tercero.</p>
+                <p><strong>Especialidad:</strong> Mantenimiento industrial y mantenimiento de instalaciones petroleras.</p>
+            </div>
+        </article>
+
+        <!-- 8. LILIANA ROSAS PACHECO -->
+        <article class="docente teacher-card">
+            <img src="imagenes/liliana.jpg" alt="Fotografía de Liliana Rosas Pacheco" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Liliana Rosas Pacheco</h3>
+                <p><strong>Materias:</strong> Conciencia Histórica, Formación Socioemocional, Lengua y Comunicación y Pensamiento Filosófico en Humanidades.</p>
+                <p><strong>Semestres:</strong> Primero y quinto.</p>
+                <p><strong>Especialidad:</strong> Licenciatura en Pedagogía, maestría en Docencia y doctorado en Educación.</p>
+            </div>
+        </article>
+
+        <!-- 9. ULISES SOLÍS RIEBOLES -->
+        <article class="docente teacher-card">
+            <img src="imagenes/ulises.jpg" alt="Fotografía de Ulises Solís Rieboles" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Ulises Solís Rieboles</h3>
+                <p><strong>Materias:</strong> Ciencias Naturales 1, 3 y 5.</p>
+                <p><strong>Semestres:</strong> Primero, tercero y quinto.</p>
+                <p><strong>Especialidad:</strong> Químico Farmacéutico Biólogo; maestrías en Análisis Clínicos y Educación. Actualmente estudia un doctorado en Educación.</p>
+            </div>
+        </article>
+
+        <!-- 10. BENJAMÍN LIMÓN MARTÍNEZ -->
+        <article class="docente teacher-card">
+            <img src="imagenes/limon.jpg" alt="Fotografía de Benjamín Limón Martínez" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Benjamín Limón Martínez</h3>
+                <p><strong>Especialidad:</strong> Informática en Sistemas.</p>
+                <p><strong>Materias:</strong> Programación, Inteligencia Artificial y Cultura Digital.</p>
+                <p><strong>Semestres:</strong> Quinto en Programación, tercero en Inteligencia Artificial y primero en Cultura Digital.</p>
+            </div>
+        </article>
+
+        <!-- 11. ERIK RAMÍREZ SOLÍS -->
+        <article class="docente teacher-card">
+            <img src="imagenes/erik.jpg" alt="Fotografía de Erik Ramírez Solís" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Erik Ramírez Solís</h3>
+                <p><strong>Especialidad:</strong> Licenciatura en Electromecánica y maestría en Educación.</p>
+                <p><strong>Materia:</strong> Pensamiento Matemático.</p>
+                <p><strong>Semestres:</strong> Primero, tercero y quinto.</p>
+            </div>
+        </article>
+
+        <!-- 12. JOSÉ LÓPEZ VÁZQUEZ -->
+        <article class="docente teacher-card">
+            <img src="imagenes/jose.jpg" alt="Fotografía de José López Vázquez" class="foto-docente">
+            <div class="teacher-info">
+                <h3>José López Vázquez</h3>
+                <p><strong>Especialidad:</strong> Ingeniería Industrial.</p>
+                <p><strong>Materia:</strong> Módulo de Mantenimiento Industrial.</p>
+                <p><strong>Semestres:</strong> Tercero y quinto, turno vespertino.</p>
+            </div>
+        </article>
+
+        <!-- 13. DIANA JANETH URIEGAS GARZA -->
+        <article class="docente teacher-card">
+            <img src="imagenes/diana.jpg" alt="Fotografía de Diana Janeth Uriegas Garza" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Diana Janeth Uriegas Garza</h3>
+                <p><strong>Área:</strong> Club de Oratoria.</p>
+                <p><strong>Especialidad:</strong> Licenciada en Administración por el Instituto Tecnológico de Reynosa.</p>
+                <p><strong>Materias:</strong> Habilidades para hablar en público y Matemáticas básicas.</p>
+                <p><strong>Semestres:</strong> Primero, tercero y quinto.</p>
+            </div>
+        </article>
+
+        <!-- 14. JOSÉ LUIS GONZÁLEZ LÓPEZ -->
+        <article class="docente teacher-card">
+            <img src="imagenes/joseluis.jpg" alt="Fotografía de José Luis González López" class="foto-docente">
+            <div class="teacher-info">
+                <h3>José Luis González López</h3>
+                <p><strong>Módulo:</strong> Semiconductores.</p>
+                <p><strong>Materias:</strong> Matemáticas y Pensamiento Matemático III.</p>
+                <p><strong>Semestre:</strong> Tercero.</p>
+            </div>
+        </article>
+
+        <!-- 15. JAVIER ALFONSO ACOSTA GARCÍA -->
+        <article class="docente teacher-card">
+            <img src="imagenes/acosta.jpg" alt="Fotografía de Javier Alfonso Acosta García" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Javier Alfonso Acosta García</h3>
+                <p><strong>Módulo:</strong> Máquinas.</p>
+                <p><strong>Especialidad:</strong> Ingeniería Electromecánica y maestría en Ingeniería Industrial y Manufactura Avanzada.</p>
+                <p><strong>Materia:</strong> Mantenimiento Automotriz.</p>
+                <p><strong>Semestres:</strong> Tercero y quinto.</p>
+            </div>
+        </article>
+
+        <!-- 16. MARIO ALONSO SANTOYO ARROYO -->
+        <article class="docente teacher-card">
+            <img src="imagenes/santoyo.jpg" alt="Fotografía de Mario Alonso Santoyo Arroyo" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Mario Alonso Santoyo Arroyo</h3>
+                <p><strong>Módulo:</strong> Mantenimiento Industrial.</p>
+                <p><strong>Especialidad:</strong> Maestría en Educación, carrera técnica en Refrigeración y Climatización e Ingeniería Industrial.</p>
+                <p><strong>Materia:</strong> Mantenimiento Industrial II y IV.</p>
+                <p><strong>Semestres:</strong> Tercero y quinto.</p>
+            </div>
+        </article>
+
+        <!-- 17. ERIKA AIDÉ PÉREZ ABREGO -->
+        <article class="docente teacher-card">
+            <img src="imagenes/erika.jpg" alt="Fotografía de Erika Aidé Pérez Abrego" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Erika Aidé Pérez Abrego</h3>
+                <p><strong>Especialidad:</strong> Ingeniería Industrial y de Sistemas y maestría en Educación.</p>
+                <p><strong>Materias:</strong> Ciencias Naturales y Humanidades.</p>
+                <p><strong>Semestres:</strong> Tercero y quinto.</p>
+            </div>
+        </article>
+
+        <!-- 18. RAFAEL VILLASANA -->
+        <article class="docente teacher-card">
+            <img src="imagenes/villasana.jpg" alt="Fotografía de Rafael Villasana" class="foto-docente">
+            <div class="teacher-info">
+                <h3>Rafael Villasana</h3>
+                <p><strong>Especialidad:</strong> Historia y Deportes.</p>
+                <p><strong>Materias:</strong> Conciencia Histórica, Cultura Digital, Lengua y Comunicación y Educación Física.</p>
+                <p><strong>Semestres:</strong> Primero, tercero y quinto.</p>
+            </div>
+        </article>
+    <!-- 19. NORMA ELENA TORRES QUIÑONES -->
+<article class="docente teacher-card">
+    <img src="imagenes/norma.jpg"
+         alt="Fotografía de Norma Elena Torres Quiñones"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Norma Elena Torres Quiñones</h3>
+        <p><strong>Salón:</strong> C4.</p>
+        <p><strong>Área:</strong> Ciencias Naturales e IT.</p>
+        <p><strong>Semestres:</strong> Primero, tercero y quinto.</p>
+        <p><strong>Formación:</strong> Ingeniería Química y Maestría en Docencia.</p>
+        <p><strong>Antigüedad en ITACE:</strong> 26 años.</p>
+    </div>
+</article>
+
+<!-- 20. BRENDA ITZEL HERRERA GARCÍA -->
+<article class="docente teacher-card">
+    <img src="imagenes/brenda.jpg"
+         alt="Fotografía de Brenda Itzel Herrera García"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Brenda Itzel Herrera García</h3>
+        <p><strong>Área:</strong> Informática.</p>
+        <p><strong>Materias:</strong> Cultura Digital e Inteligencia Artificial.</p>
+        <p><strong>Semestres:</strong> Primero y tercero.</p>
+        <p><strong>Formación:</strong> Técnica en Informática, Ingeniería en Sistemas Computacionales y Maestría en Educación.</p>
+        <p><strong>Antigüedad en ITACE:</strong> 4 años.</p>
+    </div>
+</article>
+
+<!-- 21. WALTER ALLAN BARRERA CERDA -->
+<article class="docente teacher-card">
+    <img src="imagenes/walter.jpg"
+         alt="Fotografía de Walter Allan Barrera Cerda"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Walter Allan Barrera Cerda</h3>
+        <p><strong>Área:</strong> Comunicación.</p>
+        <p><strong>Materia:</strong> Inglés III.</p>
+        <p><strong>Club:</strong> Rondalla.</p>
+        <p><strong>Semestres:</strong> Inglés III y Rondalla en primero, segundo y tercero.</p>
+        <p><strong>Formación:</strong> Ingeniería Industrial y Administración.</p>
+        <p><strong>Antigüedad en ITACE:</strong> 13 años.</p>
+    </div>
+</article>
+
+<!-- 22. ISIDRO DE LEÓN FLORES -->
+<article class="docente teacher-card">
+    <img src="imagenes/isidro.jpg"
+         alt="Fotografía de Isidro de León Flores"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Isidro de León Flores</h3>
+        <p><strong>Área:</strong> Psicopedagogía, Pedagogía y Educación.</p>
+        <p><strong>Semestres:</strong> Todos.</p>
+        <p><strong>Formación:</strong> Licenciatura en Psicopedagogía y Licenciatura en Pedagogía.</p>
+        <p><strong>Antigüedad en ITACE:</strong> 29 años.</p>
+    </div>
+</article>
+
+<!-- 23. CARLA VALERIA MORÁN LERMA -->
+<article class="docente teacher-card">
+    <img src="imagenes/carla.jpg"
+         alt="Fotografía de Carla Valeria Morán Lerma"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Carla Valeria Morán Lerma</h3>
+        <p><strong>Salón:</strong> B3.</p>
+        <p><strong>Área:</strong> Pensamiento Filosófico, Ciencias Sociales y Cultura Digital.</p>
+        <p><strong>Semestres:</strong> Primero y tercero.</p>
+        <p><strong>Formación:</strong> Maestría.</p>
+        <p><strong>Antigüedad en ITACE:</strong> 33 años.</p>
+    </div>
+</article>
+
+<!-- 24. SANDRA CATALINA SILVA CAMACHO -->
+<article class="docente teacher-card">
+    <img src="imagenes/sandra.jpg"
+         alt="Fotografía de Sandra Catalina Silva Camacho"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Sandra Catalina Silva Camacho</h3>
+        <p><strong>Salón:</strong> B4.</p>
+        <p><strong>Área:</strong> Comunicación.</p>
+        <p><strong>Semestre actual:</strong> Quinto.</p>
+        <p><strong>Formación:</strong> Maestría en Metodología de la Enseñanza.</p>
+        <p><strong>Antigüedad en ITACE:</strong> 25 años.</p>
+    </div>
+</article>
+
+<!-- 25. GRECIA ÁVALOS RAMOS -->
+<article class="docente teacher-card">
+    <img src="imagenes/grecia.jpg"
+         alt="Fotografía de Grecia Ávalos Ramos"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Grecia Ávalos Ramos</h3>
+        <p><strong>Salón:</strong> B1.</p>
+        <p><strong>Área:</strong> Lengua y Comunicación.</p>
+        <p><strong>Semestres:</strong> Primero y tercero.</p>
+        <p><strong>Formación:</strong> Licenciatura y Maestría.</p>
+        <p><strong>Antigüedad en ITACE:</strong> 3 años.</p>
+    </div>
+</article>
+
+<!-- 26. CARLOS MELECIO CARMONA OLIVARES -->
+<article class="docente teacher-card">
+    <img src="imagenes/carlos.jpg"
+         alt="Fotografía de Carlos Melecio Carmona Olivares"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Carlos Melecio Carmona Olivares</h3>
+        <p><strong>Área:</strong> Diseño Gráfico e Inglés.</p>
+        <p><strong>Semestres:</strong> Primero y tercero.</p>
+        <p><strong>Formación:</strong> Maestría en Educación Básica (UPN) y Licenciatura en Diseño Gráfico (UVB).</p>
+        <p><strong>Antigüedad en ITACE:</strong> 2 años.</p>
+    </div>
+</article>
+
+<!-- 27. BERTHA ALICIA ZAPATA ALDAPE -->
+<article class="docente teacher-card">
+    <img src="imagenes/bertha.jpg"
+         alt="Fotografía de Bertha Alicia Zapata Aldape"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Bertha Alicia Zapata Aldape</h3>
+        <p><strong>Salón:</strong> C6.</p>
+        <p><strong>Área:</strong> Matemáticas.</p>
+        <p><strong>Semestres:</strong> Primero y tercero.</p>
+        <p><strong>Formación:</strong> Doctorado.</p>
+        <p><strong>Antigüedad en ITACE:</strong> 2 años y medio.</p>
+    </div>
+</article>
+
+    <!-- MAESTRO SAMUEL -->
+<article class="docente teacher-card">
+    <img src="imagenes/samuel.jpg"
+         alt="Maestro Samuel Gonzales de la Fuente"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Samuel Gonzales de la Fuente</h3>
+
+        <p>
+            <strong>Especialidad:</strong>
+            Licenciatura en Administración de Empresas y carrera técnica en Ebanistería.
+        </p>
+
+        <p>
+            <strong>Materias:</strong>
+            Pensamiento Filosófico 1 y 3, Ciencias Sociales 1 y Estudios Literarios.
+        </p>
+
+        <p>
+            <strong>Semestres:</strong>
+            1.º, 3.º y 5.º semestre.
+        </p>
+    </div>
+</article>
+
+
+<!-- MAESTRO GERARDO -->
+<article class="docente teacher-card">
+    <img src="imagenes/gerardo.jpg"
+         alt="Maestro Gerardo de la Rosa Ortega"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Gerardo de la Rosa Ortega</h3>
+
+        <p>
+            <strong>Especialidad:</strong>
+            Licenciado en Contaduría.
+        </p>
+
+        <p>
+            <strong>Materia:</strong>
+            Inglés.
+        </p>
+
+        <p>
+            <strong>Semestre:</strong>
+            5.º semestre.
+        </p>
+    </div>
+</article>
+
+
+<!-- MAESTRO TRINIDAD -->
+<article class="docente teacher-card">
+    <img src="imagenes/trinidad.jpg"
+         alt="Maestro Trinidad Hernades Barrera"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Trinidad Hernades Barrera</h3>
+
+        <p>
+            <strong>Especialidad:</strong>
+            Biólogo.
+        </p>
+
+        <p>
+            <strong>Materias:</strong>
+            Ciencias Naturales, Experimentales y Tecnología 1, 3 y 5.
+        </p>
+
+        <p>
+            <strong>Semestres:</strong>
+            1.º, 3.º y 5.º semestre.
+        </p>
+    </div>
+</article>
+
+<!-- 31. OMAR SAÚL GONZÁLEZ ALATRISTE -->
+<article class="docente teacher-card">
+    <img src="imagenes/omar.jpg"
+         alt="Avatar de Omar Saúl González Alatriste"
+         class="foto-docente">
+
+    <div class="teacher-info">
+        <h3>Omar Saúl González Alatriste</h3>
+
+        <p><strong>Área:</strong> Prefectura.</p>
+
+        <p><strong>Responsabilidad:</strong> Responsable de tercer semestre.</p>
+
+        <p><strong>Antigüedad en ITACE:</strong> 32 años.</p>
+    </div>
+</article>
+
+
+    <div id="sinDocentes" class="empty-feature" style="display:none;">
+      <h3>No se encontraron docentes</h3>
+      <p>Intenta buscar con otro nombre, materia o especialidad.</p>
+    </div>
+
+</section>
+
+<!-- GALERÍA MULTIMEDIA -->
+      <section id="galeria" class="screen">
+        <div class="page-banner">
+          <p class="eyebrow">RECUERDOS DEL PLANTEL</p>
+          <h2>Galería multimedia</h2>
+          <p>Fotografías de espacios y actividades de la comunidad escolar.</p>
+        </div>
+
+        <div class="photo-grid">
+          <img src="imagenes/c1.jpg" alt="Fotografía escolar 1">
+          <img src="imagenes/c2.jpg" alt="Fotografía escolar 2">
+          <img src="imagenes/c3.jpg" alt="Fotografía escolar 3">
+          <img src="imagenes/c4.jpg" alt="Fotografía escolar 4">
+          <img src="imagenes/entrada.jpg" alt="Entrada principal del plantel">
+          <img src="imagenes/explanada.jpg" alt="Explanada escolar">
+          <img src="imagenes/auditorio.jpg" alt="Auditorio escolar">
+          <img src="imagenes/talleres.jpg" alt="Talleres del plantel">
+        </div>
+
+        <div class="identity-panel">
+          <h3>Identidad y orgullo ITACE</h3>
+          <p>
+            En la pantalla de bienvenida puedes escuchar el Himno ITACE
+            y el Himno de Tamaulipas usando los controles de audio.
+          </p>
+          <button class="outline-button" id="volverBienvenida" type="button">
+            Volver a la pantalla de bienvenida
+          </button>
+        </div>
+      </section>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <section id="preguntas" class="screen">
+        <div class="page-banner">
+          <p class="eyebrow">TE AYUDAMOS</p>
+          <h2>Preguntas frecuentes</h2>
+          <p>Respuestas generales; confirma los trámites con el plantel.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>¿Qué carreras se muestran en el portal?</summary>
+            <p>Se presentan ocho áreas técnicas. La disponibilidad de cupo debe confirmarse con Control Escolar.</p>
+          </details>
+          <details>
+            <summary>¿Cómo puedo conocer los requisitos de admisión?</summary>
+            <p>Consulta los medios oficiales o comunícate con el plantel.</p>
+          </details>
+          <details>
+            <summary>¿Cómo puedo conocer las instalaciones?</summary>
+            <p>En la pestaña Instalaciones puedes ver fotografías y descripciones de espacios escolares.</p>
+          </details>
+          <details>
+            <summary>¿Dónde puedo consultar noticias y eventos?</summary>
+            <p>En la sección de noticias y eventos.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="screen">
+        <div class="page-banner">
+          <p class="eyebrow">ESTAMOS PARA ORIENTARTE</p>
+          <h2>Contacto y ubicación</h2>
+          <p>Información de ubicación del plantel.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-card">
+            <h3>ITACE Plantel Reynosa</h3>
+            <p>
+              <strong>Dirección</strong><br>
+              Calle Octava y Zaragoza No. 515, Col. Prolongación Las Cumbres,
+              C.P. 88745, Reynosa, Tamaulipas.
+            </p>
+            <p>
+              <strong>Teléfonos</strong><br>
+              (899) 924-01-84 · 925-24-03 · 925-23-86
+            </p>
+            <a class="primary-button link-button"
+               href="https://www.google.com/maps/search/?api=1&query=ITACE+Reynosa+Tamaulipas"
+               target="_blank" rel="noopener noreferrer">
+              Ver ubicación en Google Maps
+            </a>
+          </div>
+
+          <img src="imagenes/entrada.jpg" alt="Entrada principal del ITACE Reynosa"
+               class="contact-photo">
+        </div>
+      </section>
+
+      <!-- CRÉDITOS -->
+      <section id="creditos" class="screen">
+        <div class="page-banner">
+          <p class="eyebrow">TRANSPARENCIA DEL PROYECTO</p>
+          <h2>Créditos y fuentes</h2>
+          <p>Información sobre la elaboración de este portal escolar.</p>
+        </div>
+
+        <div class="credits-card">
+          <h3>Proyecto académico</h3>
+          <p><strong>Nombre:</strong> Portal de presentación del ITACE Reynosa.</p>
+          <p><strong>Objetivo:</strong> Presentar información sobre la escuela, su oferta educativa, instalaciones y vida estudiantil.</p>
+          <p><strong>Tecnologías:</strong> HTML, CSS y JavaScript.</p>
+          <p><strong>Autora:</strong> Coral Osiris Campos Durán.</p>
+          <p><strong>Grupo:</strong> 502 B.</p>
+          <p class="source-note">
+            Este sitio es una propuesta académica y no representa un portal oficial del ITACE, salvo que exista autorización institucional.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ITACE Reynosa</strong>
+        <p>LEALTAD, honor y trabajo</p>
+      </div>
+      <p>Proyecto académico de presentación escolar.</p>
+      <button type="button" data-screen="inicio" class="back-top">
+       Volver al inicio ↑
+      </button>
+    </footer>
+  </div>
+
+  <!-- VISOR DE IMÁGENES -->
+  <div id="visorImagen" class="image-viewer"
+       role="dialog" aria-modal="true"
+       aria-label="Vista ampliada de imagen" aria-hidden="true">
+    <button id="cerrarVisor" class="close-viewer"
+            type="button" aria-label="Cerrar imagen ampliada">×</button>
+    <figure>
+      <img id="imagenAmpliada" src="" alt="">
+      <figcaption id="textoImagen"></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
